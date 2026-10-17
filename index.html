@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<meta name="description" content="Arsip Digital Mewah Sweet Seventeen untuk Nabill dari Arin.">
-<title>Sweet 17 Nabill — The Noir Private Archive</title>
+<meta name="theme-color" content="#08090c">
+<meta name="description" content="Arsip Eksklusif Sweet Seventeen Nabill dari Arin.">
+<title>Sweet 17 Nabill — The Royal Midnight Archive</title>
 
 <!-- =========================
      GOOGLE FONTS
@@ -17,26 +17,22 @@
 <style>
 
 /* =========================================================
-   PALETTE & VARIABLES (PREMIUM MONOCHROME / NOIR SILVER)
+   PALETTE & VARIABLES (LUXURY MIDNIGHT & CHAMPAGNE PLATINUM)
 ========================================================= */
 
 :root {
-    --bg-dark: #050505;
-    --bg-surface: #0d0d0d;
-    --bg-card: rgba(18, 18, 18, 0.88);
+    --bg-dark: #080a0f;
+    --bg-surface: #0f121a;
+    --bg-card: rgba(20, 24, 36, 0.85);
     
-    --silver-primary: #e6e6e6;
-    --silver-light: #ffffff;
-    --silver-dark: #888888;
-    --silver-gradient: linear-gradient(135deg, #a6a6a6 0%, #ffffff 30%, #737373 60%, #f2f2f2 85%, #595959 100%);
-    --silver-glow: rgba(255, 255, 255, 0.25);
+    --accent-primary: #e2c290;
+    --accent-light: #f7e8cf;
+    --accent-glow: rgba(226, 194, 144, 0.35);
+    --accent-gradient: linear-gradient(135deg, #d4af37 0%, #f3e5ab 35%, #aa8c2c 70%, #f9f1d0 100%);
 
-    --paper-white: #f5f5f7;
-    --ink-black: #111111;
-
-    --text-main: #f0f0f0;
-    --text-muted: #999999;
-    --border-silver: rgba(255, 255, 255, 0.18);
+    --platinum-white: #f8f9fa;
+    --text-muted: #9aa4b2;
+    --border-accent: rgba(226, 194, 144, 0.22);
     
     --font-heading: "Cinzel", serif;
     --font-serif: "Cormorant Garamond", serif;
@@ -61,68 +57,60 @@ html {
 
 body {
     background-color: var(--bg-dark);
-    color: var(--text-main);
+    color: var(--platinum-white);
     font-family: var(--font-sans);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Silver Text Utility */
-.silver-text {
-    background: var(--silver-gradient);
+/* Gradient Text Utility */
+.accent-text {
+    background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Glassmorphism & Monochrome Filigree Box */
+/* Glassmorphism Card */
 .glass-box {
     background: var(--bg-card);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--border-silver);
-    box-shadow: 0 35px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.12);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--border-accent);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.85), inset 0 1px 0 rgba(255,255,255,0.1);
     position: relative;
+    border-radius: 4px;
 }
 
+/* Luxury Filigree Corner Details */
 .filigree::before, .filigree::after {
     content: "";
     position: absolute;
-    width: 22px;
-    height: 22px;
-    border-color: var(--silver-primary);
+    width: 20px;
+    height: 20px;
+    border-color: var(--accent-primary);
     pointer-events: none;
     z-index: 2;
 }
 
 .filigree::before {
-    top: 14px; left: 14px;
-    border-top: 1px solid; border-left: 1px solid;
+    top: 12px; left: 12px;
+    border-top: 1.5px solid; border-left: 1.5px solid;
 }
 
 .filigree::after {
-    bottom: 14px; right: 14px;
-    border-bottom: 1px solid; border-right: 1px solid;
+    bottom: 12px; right: 12px;
+    border-bottom: 1.5px solid; border-right: 1.5px solid;
 }
 
-/* Monochrome Film Grain Overlay */
+/* Subtle Film Texture Overlay */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 9998;
     pointer-events: none;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-}
-
-/* Vignette Dark Ambient */
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 9997;
-    pointer-events: none;
-    background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.85) 100%);
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 button { font: inherit; }
@@ -136,7 +124,7 @@ a { color: inherit; text-decoration: none; }
     position: fixed;
     inset: 0;
     z-index: 10000;
-    background: #000000;
+    background: #040508;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,29 +141,29 @@ a { color: inherit; text-decoration: none; }
     font-size: 28px;
     letter-spacing: 12px;
     margin-bottom: 20px;
-    opacity: 0.9;
 }
 
 .loader-title {
     font-family: var(--font-title);
     font-size: clamp(32px, 5vw, 52px);
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     margin-bottom: 30px;
     font-weight: 400;
 }
 
 .loader-line-track {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.15);
+    height: 2px;
+    background: rgba(226, 194, 144, 0.15);
     overflow: hidden;
     position: relative;
+    border-radius: 2px;
 }
 
 .loader-line-bar {
     height: 100%;
     width: 0%;
-    background: var(--silver-gradient);
-    box-shadow: 0 0 20px var(--silver-primary);
+    background: var(--accent-gradient);
+    box-shadow: 0 0 15px var(--accent-primary);
 }
 
 .loader-number {
@@ -194,7 +182,7 @@ a { color: inherit; text-decoration: none; }
     position: fixed;
     inset: 0;
     z-index: 9000;
-    background: linear-gradient(rgba(5,5,5,0.92), rgba(5,5,5,0.97)), url("foto4.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(8,10,15,0.88), rgba(8,10,15,0.96)), url("foto4.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,14 +194,13 @@ a { color: inherit; text-decoration: none; }
     width: min(420px, 100%);
     padding: 55px 38px;
     text-align: center;
-    border-radius: 2px;
 }
 
 .pin-eyebrow {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 6px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     text-transform: uppercase;
     margin-bottom: 18px;
 }
@@ -243,14 +230,14 @@ a { color: inherit; text-decoration: none; }
 .pin-dot {
     width: 12px;
     height: 12px;
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .pin-dot.active {
-    background: var(--silver-gradient);
-    box-shadow: 0 0 15px var(--silver-primary);
+    background: var(--accent-gradient);
+    box-shadow: 0 0 15px var(--accent-primary);
     transform: scale(1.2);
 }
 
@@ -265,9 +252,9 @@ a { color: inherit; text-decoration: none; }
 .pin-key {
     height: 56px;
     width: 56px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255,255,255,0.03);
-    color: var(--text-main);
+    border: 1px solid var(--border-accent);
+    background: rgba(255,255,255,0.02);
+    color: var(--platinum-white);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -280,10 +267,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 .pin-key:hover {
-    background: var(--silver-gradient);
-    color: var(--bg-dark);
-    box-shadow: 0 0 22px rgba(255, 255, 255, 0.4);
-    border-color: var(--silver-primary);
+    background: var(--accent-gradient);
+    color: #000;
+    box-shadow: 0 0 22px var(--accent-glow);
+    border-color: var(--accent-primary);
 }
 
 .pin-key.zero { grid-column: 2; }
@@ -304,7 +291,7 @@ a { color: inherit; text-decoration: none; }
     position: fixed;
     inset: 0;
     z-index: 8000;
-    background: #050505;
+    background: #080a0f;
     display: none;
     align-items: center;
     justify-content: center;
@@ -321,7 +308,7 @@ a { color: inherit; text-decoration: none; }
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 8px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     margin-bottom: 35px;
     text-transform: uppercase;
 }
@@ -338,25 +325,25 @@ a { color: inherit; text-decoration: none; }
 .envelope-back {
     position: absolute;
     inset: 0;
-    background: #121212;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 35px 90px rgba(0,0,0,0.95);
-    border-radius: 3px;
+    background: #141824;
+    border: 1px solid var(--border-accent);
+    box-shadow: 0 35px 90px rgba(0,0,0,0.9);
+    border-radius: 4px;
 }
 
 .envelope-front {
     position: absolute;
     inset: 0;
-    background: #1a1a1a;
+    background: #1c2233;
     clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
     z-index: 3;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .envelope-flap {
     position: absolute;
     inset: 0;
-    background: #242424;
+    background: #252d42;
     clip-path: polygon(0 0, 100% 0, 50% 60%);
     transform-origin: top;
     transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
@@ -371,9 +358,9 @@ a { color: inherit; text-decoration: none; }
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: radial-gradient(circle, #3a3a3a 0%, #111111 100%);
-    border: 1px solid var(--silver-primary);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.8), inset 0 2px 4px rgba(255,255,255,0.4);
+    background: radial-gradient(circle, #d4af37 0%, #735917 100%);
+    border: 1px solid var(--accent-light);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7), inset 0 2px 4px rgba(255,255,255,0.4);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -383,15 +370,15 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
-    color: var(--silver-light);
-    font-size: 16px;
+    color: #000;
+    font-size: 17px;
     font-weight: 700;
     transition: all 0.4s ease;
 }
 
 .envelope:hover .seal {
     transform: translate(-50%, -50%) scale(1.08);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 25px var(--accent-glow);
 }
 
 .opening-title {
@@ -412,51 +399,14 @@ a { color: inherit; text-decoration: none; }
     font-family: var(--font-mono);
     font-size: 8px;
     letter-spacing: 5px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     margin-top: 35px;
     text-transform: uppercase;
     opacity: 0.85;
 }
 
 /* =========================================================
-   MAIN CONTENT & SECTIONS
-========================================================= */
-
-#mainContent {
-    display: none;
-}
-
-section {
-    position: relative;
-    padding: 140px 7vw;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 5px;
-    color: var(--silver-primary);
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
-
-.section-label::before {
-    content: "";
-    width: 35px;
-    height: 1px;
-    background: var(--silver-gradient);
-}
-
-/* =========================================================
-   NAVBAR ARCHIVE
+   NAVBAR
 ========================================================= */
 
 .nav {
@@ -473,9 +423,9 @@ section {
 }
 
 .nav.scrolled {
-    background: rgba(5, 5, 5, 0.94);
+    background: rgba(8, 10, 15, 0.92);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--border-silver);
+    border-bottom: 1px solid var(--border-accent);
     padding: 18px 7vw;
 }
 
@@ -502,9 +452,9 @@ section {
 .music-control {
     width: 44px;
     height: 44px;
-    border: 1px solid var(--border-silver);
-    background: rgba(18, 18, 18, 0.7);
-    color: var(--text-main);
+    border: 1px solid var(--border-accent);
+    background: rgba(20, 24, 36, 0.6);
+    color: var(--platinum-white);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -515,15 +465,15 @@ section {
 }
 
 .music-control:hover {
-    border-color: var(--silver-primary);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .music-control.playing::after {
     content: "";
     position: absolute;
     inset: -4px;
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 50%;
     animation: pulseGlow 1.8s infinite;
 }
@@ -542,8 +492,7 @@ section {
     display: flex;
     align-items: center;
     padding-top: 100px;
-    background: linear-gradient(90deg, rgba(5,5,5,0.97) 0%, rgba(5,5,5,0.85) 50%, rgba(5,5,5,0.55) 100%), url("foto1.jpg") center/cover no-repeat;
-    filter: grayscale(100%);
+    background: linear-gradient(90deg, rgba(8,10,15,0.96) 0%, rgba(8,10,15,0.78) 50%, rgba(8,10,15,0.3) 100%), url("foto1.jpg") center/cover no-repeat;
 }
 
 .hero-content {
@@ -556,7 +505,7 @@ section {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 7px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     margin-bottom: 25px;
     text-transform: uppercase;
 }
@@ -577,7 +526,7 @@ section {
     display: block;
     margin-left: 8%;
     margin-top: 15px;
-    color: var(--text-main);
+    color: var(--platinum-white);
 }
 
 .hero-copy {
@@ -593,7 +542,7 @@ section {
     margin-top: 50px;
     display: flex;
     gap: 45px;
-    border-top: 1px solid var(--border-silver);
+    border-top: 1px solid var(--border-accent);
     padding-top: 30px;
 }
 
@@ -607,7 +556,7 @@ section {
     font-family: var(--font-mono);
     font-size: 8px;
     letter-spacing: 3px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
 }
 
 .meta-value {
@@ -635,8 +584,8 @@ section {
     background: var(--bg-surface);
     text-align: center;
     padding: 160px 7vw;
-    border-top: 1px solid var(--border-silver);
-    border-bottom: 1px solid var(--border-silver);
+    border-top: 1px solid var(--border-accent);
+    border-bottom: 1px solid var(--border-accent);
 }
 
 .quote-mark {
@@ -659,7 +608,7 @@ section {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 5px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
 }
 
 /* =========================================================
@@ -667,7 +616,7 @@ section {
 ========================================================= */
 
 .letter-section {
-    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04), transparent 40%), var(--bg-dark);
+    background: radial-gradient(circle at 80% 20%, rgba(226, 194, 144, 0.05), transparent 40%), var(--bg-dark);
 }
 
 .letter-grid {
@@ -694,10 +643,10 @@ section {
 }
 
 .letter-paper {
-    background: var(--paper-white);
-    color: var(--ink-black);
+    background: #f4efea;
+    color: #12141d;
     padding: 65px 52px;
-    border-radius: 2px;
+    border-radius: 3px;
     position: relative;
     box-shadow: 25px 35px 90px rgba(0,0,0,0.85);
     transform: rotate(0.6deg);
@@ -707,7 +656,7 @@ section {
     content: "";
     position: absolute;
     inset: 12px;
-    border: 1px solid rgba(17, 17, 17, 0.15);
+    border: 1px solid rgba(18, 20, 29, 0.15);
     pointer-events: none;
 }
 
@@ -715,7 +664,7 @@ section {
     font-family: var(--font-mono);
     font-size: 8px;
     letter-spacing: 4px;
-    color: #555555;
+    color: #6a6e7d;
     margin-bottom: 30px;
 }
 
@@ -723,14 +672,14 @@ section {
     font-family: var(--font-title);
     font-size: 36px;
     margin-bottom: 25px;
-    color: #111111;
+    color: #12141d;
 }
 
 .letter-body {
     font-family: var(--font-serif);
     font-size: 20px;
     line-height: 1.85;
-    color: #222222;
+    color: #222636;
 }
 
 .signature {
@@ -738,7 +687,7 @@ section {
     font-style: italic;
     font-size: 32px;
     margin-top: 40px;
-    color: #111111;
+    color: #12141d;
 }
 
 /* =========================================================
@@ -761,8 +710,8 @@ section {
 .turntable-container {
     position: relative;
     padding: 22px;
-    background: rgba(15, 15, 15, 0.9);
-    border: 1px solid var(--border-silver);
+    background: rgba(15, 18, 26, 0.9);
+    border: 1px solid var(--border-accent);
     border-radius: 8px;
     box-shadow: 0 30px 90px rgba(0,0,0,0.95);
 }
@@ -771,8 +720,8 @@ section {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background: repeating-radial-gradient(circle, #080808 0px, #181818 2px, #080808 4px, #222222 5px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.9), inset 0 0 0 8px #080808;
+    background: repeating-radial-gradient(circle, #080a0f 0px, #181d2a 2px, #080a0f 4px, #202738 5px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.9), inset 0 0 0 8px #080a0f;
     position: relative;
     animation: spinVinyl 7s linear infinite;
     animation-play-state: paused;
@@ -791,7 +740,7 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, #222222 0%, #555555 50%, #111111 80%, #cccccc 100%);
+    background: radial-gradient(circle, #1c2233 0%, #aa8c2c 50%, #10141f 80%, #e2c290 100%);
     border: 2px solid #000;
 }
 
@@ -805,7 +754,7 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid var(--silver-light);
+    border: 2px solid var(--accent-light);
 }
 
 /* Animated Tonearm */
@@ -830,14 +779,14 @@ section {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: radial-gradient(circle, #ffffff, #444444);
+    background: radial-gradient(circle, #e2c290, #55421a);
     border: 2px solid #000;
 }
 
 .tonearm-stick {
     width: 4px;
     height: 130px;
-    background: linear-gradient(to right, #e6e6e6, #ffffff, #666666);
+    background: linear-gradient(to right, #d4af37, #ffffff, #886d1d);
     position: absolute;
     top: 16px;
     left: 14px;
@@ -847,11 +796,11 @@ section {
 .tonearm-head {
     width: 14px;
     height: 24px;
-    background: #111111;
+    background: #111;
     position: absolute;
     bottom: -10px;
     left: 9px;
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 2px;
 }
 
@@ -866,7 +815,7 @@ section {
 
 .song-label {
     font-family: var(--font-mono);
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     font-size: 9px;
     letter-spacing: 4px;
 }
@@ -887,9 +836,9 @@ section {
 
 .play-song-btn {
     margin-top: 35px;
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     background: transparent;
-    color: var(--text-main);
+    color: var(--platinum-white);
     padding: 16px 36px;
     cursor: pointer;
     font-family: var(--font-mono);
@@ -900,13 +849,13 @@ section {
 }
 
 .play-song-btn:hover {
-    background: var(--silver-gradient);
-    color: var(--bg-dark);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    background: var(--accent-gradient);
+    color: #000;
+    box-shadow: 0 0 25px var(--accent-glow);
 }
 
 /* =========================================================
-   GALLERY ARCHIVE
+   GALLERY ARCHIVE (FULL COLOR PHOTOS)
 ========================================================= */
 
 .gallery-section {
@@ -947,8 +896,9 @@ section {
     overflow: hidden;
     cursor: pointer;
     background: #000;
-    border: 1px solid var(--border-silver);
-    border-radius: 2px;
+    border: 1px solid var(--border-accent);
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -960,23 +910,23 @@ section {
 .photo-card:nth-child(6) { grid-column: span 7; height: 500px; margin-top: 60px; }
 .photo-card:nth-child(7) { grid-column: span 12; height: 600px; }
 
+/* PERBAIKAN FOTO: Full Color tanpa grayscale */
 .photo-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1.15) brightness(0.85);
+    filter: none !important; /* Memastikan foto berwarna penuh */
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
 }
 
 .photo-card:hover img {
     transform: scale(1.06);
-    filter: grayscale(80%) contrast(1.05) brightness(0.98);
 }
 
 .photo-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(5,5,5,0.88) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(8,10,15,0.92) 0%, rgba(8,10,15,0.2) 60%, transparent 100%);
     opacity: 0.85;
     transition: opacity 0.4s ease;
 }
@@ -988,7 +938,11 @@ section {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 4px;
-    color: var(--silver-light);
+    color: var(--accent-light);
+    background: rgba(8, 10, 15, 0.6);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border-accent);
 }
 
 .photo-caption {
@@ -1033,7 +987,7 @@ section {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: linear-gradient(to bottom, var(--silver-primary), transparent);
+    background: linear-gradient(to bottom, var(--accent-primary), transparent);
 }
 
 .timeline-item {
@@ -1048,12 +1002,12 @@ section {
 .timeline-dot {
     width: 13px;
     height: 13px;
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 50%;
     background: var(--bg-dark);
     position: absolute;
     top: 5px;
-    box-shadow: 0 0 10px var(--silver-primary);
+    box-shadow: 0 0 10px var(--accent-primary);
 }
 
 .timeline-item:nth-child(odd) .timeline-dot { right: -7px; }
@@ -1063,7 +1017,7 @@ section {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 4px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     margin-bottom: 12px;
 }
 
@@ -1086,8 +1040,7 @@ section {
 ========================================================= */
 
 .game-section {
-    background: linear-gradient(rgba(5,5,5,0.92), rgba(5,5,5,0.97)), url("foto6.jpg") center/cover fixed no-repeat;
-    filter: grayscale(100%);
+    background: linear-gradient(rgba(8,10,15,0.92), rgba(8,10,15,0.96)), url("foto6.jpg") center/cover fixed no-repeat;
 }
 
 .game-card {
@@ -1095,7 +1048,6 @@ section {
     margin: auto;
     padding: 70px 50px;
     text-align: center;
-    border-radius: 2px;
 }
 
 .game-title {
@@ -1128,31 +1080,31 @@ section {
 
 .answer {
     padding: 20px;
-    border: 1px solid var(--border-silver);
-    background: rgba(255,255,255,0.03);
-    color: var(--text-main);
+    border: 1px solid var(--border-accent);
+    background: rgba(255,255,255,0.02);
+    color: var(--platinum-white);
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--font-sans);
     font-size: 13px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .answer:hover {
-    border-color: var(--silver-primary);
-    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-primary);
+    background: rgba(226, 194, 144, 0.08);
 }
 
 .answer.correct {
-    background: rgba(255, 255, 255, 0.22);
-    border-color: #ffffff;
-    color: #ffffff;
+    background: rgba(46, 117, 89, 0.85);
+    border-color: #52c295;
+    color: #fff;
 }
 
 .answer.wrong {
-    background: rgba(50, 50, 50, 0.6);
-    border-color: #555555;
-    color: #888888;
+    background: rgba(120, 48, 48, 0.85);
+    border-color: #e06e6e;
+    color: #fff;
 }
 
 .game-result {
@@ -1175,7 +1127,7 @@ section {
 .meter {
     width: min(520px, 90%);
     height: 10px;
-    border: 1px solid var(--border-silver);
+    border: 1px solid var(--border-accent);
     margin: 50px auto 25px;
     padding: 2px;
     border-radius: 10px;
@@ -1184,8 +1136,8 @@ section {
 .meter-fill {
     height: 100%;
     width: 0%;
-    background: var(--silver-gradient);
-    box-shadow: 0 0 15px var(--silver-primary);
+    background: var(--accent-gradient);
+    box-shadow: 0 0 15px var(--accent-primary);
     border-radius: 10px;
     transition: width 2.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -1242,9 +1194,9 @@ section {
 }
 
 .secret-btn {
-    border: 1px solid var(--silver-primary);
+    border: 1px solid var(--accent-primary);
     background: transparent;
-    color: var(--text-main);
+    color: var(--platinum-white);
     padding: 18px 38px;
     cursor: pointer;
     font-family: var(--font-mono);
@@ -1255,9 +1207,9 @@ section {
 }
 
 .secret-btn:hover {
-    background: var(--silver-gradient);
-    color: var(--bg-dark);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    background: var(--accent-gradient);
+    color: #000;
+    box-shadow: 0 0 25px var(--accent-glow);
 }
 
 .secret-message {
@@ -1278,15 +1230,14 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(5,5,5,0.6), rgba(5,5,5,0.95)), url("foto7.jpg") center/cover fixed no-repeat;
-    filter: grayscale(100%);
+    background: linear-gradient(rgba(8,10,15,0.65), rgba(8,10,15,0.95)), url("foto7.jpg") center/cover fixed no-repeat;
 }
 
 .final-small {
     font-family: var(--font-mono);
     font-size: 9px;
     letter-spacing: 6px;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
 }
 
 .final-title {
@@ -1303,7 +1254,7 @@ section {
     font-style: italic;
     font-size: 0.5em;
     margin-top: 20px;
-    color: var(--text-main);
+    color: var(--platinum-white);
 }
 
 .final-from {
@@ -1315,15 +1266,15 @@ section {
 .final-line {
     width: 60px;
     height: 1px;
-    background: var(--silver-gradient);
+    background: var(--accent-gradient);
     margin: 30px auto;
 }
 
 .footer {
-    background: #020202;
+    background: #040508;
     padding: 40px;
     text-align: center;
-    border-top: 1px solid var(--border-silver);
+    border-top: 1px solid var(--border-accent);
 }
 
 .footer p {
@@ -1340,7 +1291,7 @@ section {
 #lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.96);
+    background: rgba(3, 4, 6, 0.96);
     z-index: 10001;
     display: none;
     align-items: center;
@@ -1353,9 +1304,9 @@ section {
     max-width: 88vw;
     max-height: 85vh;
     object-fit: contain;
-    border: 1px solid var(--border-silver);
+    border: 1px solid var(--border-accent);
     box-shadow: 0 30px 100px #000;
-    filter: grayscale(100%);
+    filter: none !important; /* Memastikan lightbox foto tetap berwarna penuh */
 }
 
 .lightbox-close {
@@ -1364,21 +1315,21 @@ section {
     right: 35px;
     border: 0;
     background: none;
-    color: var(--text-main);
+    color: var(--platinum-white);
     font-size: 40px;
     cursor: pointer;
     font-family: var(--font-sans);
 }
 
 /* =========================================================
-   SILVER DUST PARTICLES
+   PARTICLES
 ========================================================= */
 
 .particle {
     position: fixed;
     pointer-events: none;
     z-index: 100;
-    color: var(--silver-primary);
+    color: var(--accent-primary);
     opacity: 0;
     animation: floatUp linear forwards;
 }
@@ -1444,7 +1395,7 @@ section {
 <!-- PRELOADER -->
 <div id="preloader">
     <div class="loader-wrap">
-        <div class="loader-crest silver-text">A & N</div>
+        <div class="loader-crest accent-text">A & N</div>
         <div class="loader-title">Untuk Nabill</div>
         <div class="loader-line-track">
             <div class="loader-line-bar" id="loaderBar"></div>
@@ -1457,8 +1408,8 @@ section {
 <div id="pinScreen">
     <div class="pin-box glass-box filigree" id="pinBox">
         <div class="pin-eyebrow">Arsip Rahasia · Sweet 17</div>
-        <h1 class="pin-title silver-text">NABILL</h1>
-        <p class="pin-subtitle">Masukkan 4 digit tanggal spesial.</p>
+        <h1 class="pin-title accent-text">NABILL</h1>
+        <p class="pin-subtitle">Masukkan 4 digit PIN rahasia (1718).</p>
 
         <div class="pin-dots">
             <span class="pin-dot"></span>
@@ -1512,7 +1463,7 @@ section {
 
 <!-- NAVBAR -->
 <nav class="nav" id="nav">
-    <a href="#home" class="nav-logo silver-text">A ♡ N</a>
+    <a href="#home" class="nav-logo accent-text">A ♡ N</a>
     <div class="nav-right">
         <div class="nav-date">18 OKTOBER 2009 · SWEET 17</div>
         <button class="music-control" id="musicBtn" aria-label="Toggle Music">♪</button>
@@ -1526,10 +1477,10 @@ section {
             <div class="hero-overline">Arsip Spesial Ulang Tahun Ke-17</div>
             <h1 class="hero-title">
                 Selamat
-                <em class="silver-text">Ulang Tahun, Nabill</em>
+                <em class="accent-text">Ulang Tahun, Nabill</em>
             </h1>
             <p class="hero-copy">
-                Untuk seseorang yang selalu berhasil bikin hari-hari terasa lebih hangat dan menyenangkan. Arsip digital noir ini Arin buat khusus untuk merayakan usia 17 tahunmu.
+                Untuk seseorang yang selalu berhasil bikin hari-hari terasa lebih hangat dan menyenangkan. Arsip digital ini Arin buat khusus untuk merayakan umur 17 tahunmu!
             </p>
             <div class="hero-meta">
                 <div class="meta-item">
@@ -1553,7 +1504,7 @@ section {
 <!-- QUOTE -->
 <section class="quote-section">
     <div class="container reveal">
-        <div class="quote-mark silver-text">“</div>
+        <div class="quote-mark accent-text">“</div>
         <div class="big-quote">
             Usia 17 cuma datang sekali seumur hidup, tapi bahagianya semoga bertahan selamanya.
         </div>
@@ -1608,7 +1559,7 @@ section {
 
             <div class="song-info">
                 <div class="song-label">LAGU PILIHAN</div>
-                <div class="song-title silver-text">Shape of My Heart</div>
+                <div class="song-title accent-text">Shape of My Heart</div>
                 <div class="song-artist">Sting</div>
                 <button class="play-song-btn" id="playSong">PUTAR LAGU ♫</button>
             </div>
@@ -1616,7 +1567,7 @@ section {
     </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY (FULL COLOR) -->
 <section class="gallery-section">
     <div class="container">
         <div class="gallery-heading reveal">
@@ -1624,7 +1575,7 @@ section {
                 <div class="section-label">03 · ARSIP VISUAL</div>
                 <h2 class="gallery-title">Tujuh<br>Momen.</h2>
             </div>
-            <p class="gallery-note">Tujuh potret sederhana yang menyimpan banyak cerita di baliknya.</p>
+            <p class="gallery-note">Tujuh potret penuh warna yang menyimpan banyak cerita indah.</p>
         </div>
 
         <div class="gallery-grid">
@@ -1769,7 +1720,7 @@ section {
         <div class="meter">
             <div class="meter-fill" id="meterFill"></div>
         </div>
-        <div class="meter-number silver-text" id="meterNumber">0%</div>
+        <div class="meter-number accent-text" id="meterNumber">0%</div>
         <p class="meter-text">Kapasitas doa & kebahagiaan sudah melebihi batas maksimal.</p>
     </div>
 </section>
@@ -1778,7 +1729,7 @@ section {
 <section class="secret-section">
     <div class="container">
         <div class="secret-box reveal">
-            <div class="lock-icon silver-text">✧</div>
+            <div class="lock-icon accent-text">✧</div>
             <div class="section-label" style="justify-content: center;">07 · PESAN RAHASIA</div>
             <h2 class="secret-title">Satu Hal Lagi.</h2>
             <p class="secret-sub">Kamu sudah sampai di bagian akhir arsip. Ada pesan terakhir buat kamu.</p>
@@ -1788,7 +1739,7 @@ section {
             <div class="secret-message" id="secretMessage">
                 Semoga di usia 17 tahun ini, Nabill makin bahagia, makin lancar urusannya, dan selalu dikelilingi orang-orang baik.
                 <br><br>
-                <span class="silver-text" style="font-family: var(--font-title);">Selamat bertambah dewasa, Nabill!</span>
+                <span class="accent-text" style="font-family: var(--font-title);">Selamat bertambah dewasa, Nabill!</span>
             </div>
         </div>
     </div>
@@ -1800,7 +1751,7 @@ section {
         <div class="final-small">AKHIR ARSIP · AWAL BABAK BARU</div>
         <h2 class="final-title">
             Happy 17th,
-            <span class="silver-text">Nabill!</span>
+            <span class="accent-text">Nabill!</span>
         </h2>
         <div class="final-line"></div>
         <div class="final-from">Tulus dari,<br><strong>Arin</strong></div>
@@ -1900,7 +1851,7 @@ function updatePinDots() {
 function checkPin() {
     if (enteredPin === CONFIG.PIN) {
         pinMessage.textContent = "PIN BENAR · MEMBUKA ARSIP ♡";
-        pinMessage.style.color = "#ffffff";
+        pinMessage.style.color = "#e2c290";
         setTimeout(() => {
             pinScreen.style.opacity = "0";
             setTimeout(() => {
@@ -1910,7 +1861,7 @@ function checkPin() {
         }, 600);
     } else {
         pinMessage.textContent = "PIN SALAH · COBA LAGI (1718)";
-        pinMessage.style.color = "#888888";
+        pinMessage.style.color = "#e06e6e";
         enteredPin = "";
         updatePinDots();
         pinBox.animate([
